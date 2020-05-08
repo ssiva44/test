@@ -1,0 +1,152 @@
+<!-- <div  id="form-wrapper">
+  <h1>Q2 SOLUTIONS</h1>
+  <div  class="mydiv">
+  <h6 > A Quintiles Quest joint Venture </h6>
+  </div>
+  <form [formGroup]="testForms" (ngSubmit)="onSubmit()"
+  novalidate="" class="ng-untouched ng-pristine ng-valid">
+  <div class="mydiv">
+      <label class="lab"> Sign in to the Site Portal </label>
+  </div>
+  <div class="form-group">
+  <label  for="Username">User Name:</label>
+  <input formControlName="UserName" type="text" class="form-control"
+  [ngClass]="{ 'is-invalid': submitted && f.UserName.errors }"> 
+  <div  class="invalid-feedback">
+  <div >User Name is required </div>
+  </div>
+  <div *ngIf="notvalidusername" class="invalid-feedback">
+          <div>UserName is incorrect</div>
+  </div>
+  <br >
+  <label  for="exampleInputPassword1">Password:</label>
+  <input formControlName="Password" class="form-control"
+  
+  [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" type="password" >
+  
+  <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+  
+          <div *ngIf="f.Password.errors.required">Password is required </div>
+  
+  </div>
+  
+  <div *ngIf="submitted && notvalidpassword" class="invalid-feedback">
+  
+          <div >Password is incorrect</div>
+  
+  </div>
+  
+  <br >
+  
+  </div>
+  
+   
+  
+  <div class="form-group">
+  
+      <button class="but" [disabled]="loading" >Login</button>
+  
+      <br>
+  
+  </div>
+  
+   
+  
+  <div class="mydiv">
+  
+  <label class="pwdforgot" for="forgotpasword" id="labelmid">Forgot Your Password</label>
+  
+  <br >
+  
+  </div>
+  
+   
+  
+  <div class="mydiv">
+  
+  <label class="donthaveacc" for="donthaveacc" id="labelmid">Don't have an account?</label>
+  
+  <br >
+  
+  </div>
+  
+   
+  
+  <div  class="form-group">
+  
+  <button  class="newaccount" type="button" routerLink="sign-up">Create An Account</button>
+  
+  <br > <br >
+  
+  </div>
+  
+   
+  
+  <div  class="mydiv">
+  
+  <label class="copyrights" for="donthaveacc">Copyrights 2019 @ Q2 Solutions. All rights reserved. </label>
+  
+  <br />
+  
+  <br />
+  
+  </div>
+  
+   
+  
+  </form>
+  
+   
+  
+  </div> -->
+
+
+
+
+  <div class="login-container">
+        
+    <div class="login-box animated fadeInDown">
+        <!-- <div class="login-logo"></div> -->
+        <div class="login-body">
+            <div class="login-title"><strong>Welcome</strong>, Please login</div>
+            <form [formGroup]="testForms" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="text" formControlName="UserName" class="form-control" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.UserName.errors }">
+                </div>
+                <div *ngIf="submitted && f.UserName.errors" class="error">
+                        <label class="error error-margin" *ngIf="f.UserName.errors.required">User Name is required </label>
+                    <label class="error error-margin" *ngIf="notvalidusername">UserName is incorrect</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="password" [ngClass]="{ 'is-invalid ': submitted && f.Password.errors }" formControlName="Password" class="form-control" placeholder="Password"/>
+                </div>
+                <div *ngIf="submitted && f.Password.errors" >
+                    <label *ngIf="f.Password.errors.required" class="error error-margin">Password is required </label>
+            </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <a  class="btn btn-link btn-block">Forgot your password?</a>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-info btn-block" (click)="onSubmit()">Log In</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="login-footer">
+            <div class="pull-left">
+                &copy; 2019 GYM App
+            </div>
+            <div class="pull-right">
+                <a >About</a> |
+                <a >Privacy</a> |
+                <a>Contact Us</a>
+            </div>
+        </div>
+    </div>
+    
+</div>

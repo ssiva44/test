@@ -1,0 +1,9 @@
+.is-active{
+    background: #1caf9a;
+  color:#fff;
+  cursor: pointer;
+}
+
+.wrapper{
+  margin-left: 3%;
+}

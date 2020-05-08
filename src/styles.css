@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.input-group-addon {
+    color: #FFF !important;
+    background-color: #555 !important;
+    border: 1px solid #555 !important;
+}
+
+
+body{
+    font-size: 12px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #22262e!important;
+}
+.panel-default>.panel-heading{
+    background-color: #555 !important;
+    border-color: #555 !important;
+}
+.panel .panel-title {
+    color: #FFF!important;
+}
+.btn-primary {
+    background-color: #1b1e24 !important;
+    border-color: #1b1e24 !important;
+}
+
+.panel-width{
+    width: 98% !important;
+}
+
+.tab-bolder{
+    font-weight: 700;
+}
